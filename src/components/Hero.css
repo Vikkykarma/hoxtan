@@ -1,0 +1,115 @@
+/* --- Background Image Styling with Exact Height --- */
+.carousel-bg-image {
+  height: 372.5px; /* Aapki fixed height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Image overlay overlay layer */
+.carousel-bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25); /* Text readability ke liye overlay */
+}
+
+/* --- Caption Customization (Centered inside 372.5px) --- */
+.full-carousel-wrapper .custom-caption {
+  position: absolute;
+  left: 2% !important;
+  right: auto !important;
+  top: 45%; /* Thoda upar taaki neeche controls ke liye space bache */
+  transform: translateY(-50%);
+  text-align: left;
+  max-width: 480px;
+  z-index: 2;
+  padding: 0;
+}
+
+/* Typography Optimized for Shorter Height */
+.custom-caption .subtitle {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.custom-caption .main-title {
+  font-family: Outfit;
+  font-size: 34px; /* Height ke hisab se font thoda chota kiya hai */
+  color: #1a2b49;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.custom-caption .description {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.custom-caption .btn-shop {
+  background-color: #aa7c33 !important;
+  border: none !important;
+  padding: 10px 24px;
+  font-size: 15px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+/* --- Controls & Indicators Adjusted for 372.5px Height --- */
+.full-carousel-wrapper .carousel-indicators {
+  justify-content: flex-start !important;
+  margin-left: 4% !important; /* Arrows ke just baad dots alignment */
+  bottom: 20px !important;
+  width: auto !important;
+}
+
+.full-carousel-wrapper .carousel-indicators [data-bs-target] {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background-color: #aa7c33 !important;
+  opacity: 0.4;
+}
+
+.full-carousel-wrapper .carousel-indicators .active {
+  opacity: 1 !important;
+}
+
+.full-carousel-wrapper .carousel-control-prev,
+.full-carousel-wrapper .carousel-control-next {
+  top: auto !important;
+  bottom: 15px !important; /* Bottom se exact gap */
+  width: auto !important;
+  height: auto !important;
+  opacity: 1 !important;
+}
+
+.full-carousel-wrapper .carousel-control-prev {
+  left: 2% !important; /* Text line ke alignment me */
+  right: auto !important;
+}
+
+.full-carousel-wrapper .carousel-control-next {
+  left: 9% !important; /* Left arrow ke bilkul side me */
+  right: auto !important;
+}
+
+.full-carousel-wrapper .carousel-control-prev-icon,
+.full-carousel-wrapper .carousel-control-next-icon {
+  width: 14px !important;
+  height: 14px !important;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(340deg) !important;
+}

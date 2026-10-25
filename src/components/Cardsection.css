@@ -1,0 +1,29 @@
+/* 🚀 स्मूथ होवर इफ़ेक्ट के लिए कस्टम CSS */
+.custom-hover-card {
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  background: transparent !important; /* बैकग्राउंड को साफ़ रखने के लिए */
+}
+
+/* माउस ले जाने पर (Hover) होने वाला बदलाव */
+.custom-hover-card:hover {
+  transform: translateY(-6px); /* कार्ड को स्मूथली 8px ऊपर उठाएगा */
+
+  /* नीचे एक बहुत ही प्रीमियम और हल्की परछाई देगा */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+  transition: all 0.5s ease-in-out;
+}
+
+/* इमेज को ब्लैक बैकग्राउंड में फिट करने के लिए */
+.custom-hover-card .card-img-top {
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.col {
+  border-radius: 12px !important;
+  border-style: hidden !important;
+  padding-right: 1px !important;
+}

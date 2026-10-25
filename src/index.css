@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: outfit, 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+/* ==========================================
+   1. ग्लोबल फ्लूइड सेटिंग्स (Fluid Typography)
+   ========================================== */
+html {
+  /* बड़ी स्क्रीन्स पर बेस साइज़ 16px रहेगा, छोटे मोबाइल पर अपने आप घटकर 14px हो जाएगा */
+  font-size: clamp(14px, 1vw + 10px, 16px);
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* हॉरिजॉन्टल स्क्रॉल (साइड स्क्रॉल) को रोकने के लिए सबसे ज़रूरी */
+}
+
+/* इमेज को स्क्रीन से बाहर जाने से रोकने के लिए */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================
+   2. टैबलेट स्क्रीन्स के लिए (Tablets - Breakpoint: 992px)
+   ========================================== */
+@media (max-width: 991.98px) {
+  /* यहाँ वो चेंज डालें जो टैबलेट और आईपैड पर दिखने चाहिए */
+
+  .container,
+  .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* अगर आपके पेज पर कोई बड़ा बैनर टेक्स्ट है तो उसका साइज़ छोटा करें */
+  h1,
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* ==========================================
+   3. मोबाइल स्क्रीन्स के लिए (Mobile Phones - Breakpoint: 768px)
+   ========================================== */
+@media (max-width: 767.98px) {
+  /* 🚀 यह सेक्शन सबसे ज़रूरी है (मोबाइल रिस्पॉन्सिवनेस के लिए) */
+
+  /* जो सेक्शन डेस्कटॉप पर अगल-बगल (Flex/Grid) थे, उन्हें ऊपर-नीचे करने के लिए */
+  .row,
+  .flex-container,
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important; /* एलिमेंट्स को एक के नीचे एक लाएगा */
+    gap: 20px !important;
+  }
+
+  /* सभी कॉलम्स को मोबाइल पर 100% चौड़ाई देने के लिए */
+  .col,
+  [class*='col-'] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: unset !important;
+  }
+
+  /* मोबाइल पर पैडिंग और मार्जिन कम करना (ताकि कंटेंट चिपका हुआ न दिखे) */
+  .section-padding,
+  section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* मोबाइल फॉन्ट एडजस्टमेंट */
+  h1,
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.6rem !important;
+  }
+  h3 {
+    font-size: 1.3rem !important;
+  }
+  p {
+    font-size: 0.95rem !important;
+  }
+
+  /* बटन को मोबाइल पर फुल-विड्थ (Full width) करने के लिए (ऑप्शनल) */
+  .btn-custom {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+/* 🚀 कैरोसेल की स्क्रॉल बार को हमेशा के लिए छुपाने का पक्का इलाज */
+.custom-scrollbar {
+  -ms-overflow-style: none !important; /* IE और Edge के लिए */
+  scrollbar-width: none !important; /* Firefox के लिए */
+}
+
+/* Chrome, Safari, Opera और सभी Chromium ब्राउज़र्स के लिए (होवर पर भी काम करेगा) */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
