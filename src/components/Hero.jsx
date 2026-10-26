@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Hero.css'; // Is CSS file ko updated code se badal dein
-
+import './Hero.css';
 function Hero() {
   const [index, setIndex] = useState(0);
 
@@ -14,9 +13,7 @@ function Hero() {
   return (
     <div className='full-carousel-wrapper'>
       <Carousel activeIndex={index} onSelect={handleSelect} indicators={true}>
-        {/* Slide 1 */}
         <Carousel.Item>
-          {/* inline style me image link dalein */}
           <div
             className='carousel-bg-image'
             style={{ backgroundImage: `url('assets/1.webp')` }}
@@ -34,7 +31,6 @@ function Hero() {
         </Carousel.Item>
 
         <Carousel.Item>
-          {/* inline style me image link dalein */}
           <div
             className='carousel-bg-image'
             style={{ backgroundImage: `url('assets/1.webp')` }}
@@ -52,7 +48,6 @@ function Hero() {
         </Carousel.Item>
 
         <Carousel.Item>
-          {/* inline style me image link dalein */}
           <div
             className='carousel-bg-image'
             style={{ backgroundImage: `url('assets/1.webp')` }}
@@ -69,7 +64,6 @@ function Hero() {
           </div>
         </Carousel.Item>
 
-        {/* Slide 2 */}
         <Carousel.Item>
           <div
             className='carousel-bg-image'

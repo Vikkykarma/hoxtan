@@ -24,7 +24,6 @@ function Sidebar({ isOpen, onClose }) {
       backdrop={true}
       style={{ backgroundColor: '#FAFAFA', width: '320px' }}
     >
-      {/* Sidebar Close Header */}
       <Offcanvas.Header className='px-4 pt-4 pb-2 d-flex justify-content-between align-items-center'>
         <div className='d-flex flex-column align-items-center'>
           <span
@@ -52,7 +51,6 @@ function Sidebar({ isOpen, onClose }) {
         </button>
       </Offcanvas.Header>
 
-      {/* Sidebar Content Links List */}
       <Offcanvas.Body className='px-3 pt-2 d-flex flex-column justify-content-between h-100'>
         <div>
           {/* User Status Profile Card */}
@@ -90,7 +88,6 @@ function Sidebar({ isOpen, onClose }) {
             <GoChevronRight size={18} color='#856404' />
           </div>
 
-          {/* Core App Navigation Stack */}
           <ListGroup variant='flush' className='bg-transparent'>
             <ListGroup.Item
               action
@@ -173,7 +170,6 @@ function Sidebar({ isOpen, onClose }) {
           </ListGroup>
         </div>
 
-        {/* Sidebar Help Footer Info */}
         <div
           className='p-3 mt-auto border-top'
           style={{

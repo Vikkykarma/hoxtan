@@ -5,8 +5,6 @@ import Products from '../Products.js';
 import { Link } from 'react-router-dom';
 
 function Cardsection() {
-  // सैंपल डेटा (आपके इमेज ग्रिड के अनुसार)
-
   return (
     <Container className='my-5'>
       <Row xs={1} sm={2} md={3} lg={5} className='g-4'>
@@ -24,7 +22,6 @@ function Cardsection() {
                     src={product.img}
                     alt={product.title}
                   />
-                  {/* हार्ट/विशलिस्ट आइकॉन */}
                   <button
                     className='btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-1 border-0 shadow-sm'
                     style={{

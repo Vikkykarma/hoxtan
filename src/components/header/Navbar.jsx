@@ -19,7 +19,6 @@ function NavbarBox({ onToggleSidebar }) {
         fluid
         className='px-3 px-md-5 d-flex align-items-center justify-content-between'
       >
-        {/* Brand Logo (Left Side) */}
         <Navbar.Brand
           href='#home'
           className='d-flex flex-column align-items-center text-decoration-none me-0'
@@ -42,7 +41,6 @@ function NavbarBox({ onToggleSidebar }) {
           </small>
         </Navbar.Brand>
 
-        {/* Desktop Menus (Middle Side) */}
         <Navbar.Collapse
           id='basic-navbar-nav'
           className='d-none d-lg-flex justify-content-center flex-grow-1'
@@ -56,7 +54,7 @@ function NavbarBox({ onToggleSidebar }) {
             </Nav.Link>
             <div
               className='position-static'
-              onMouseEnter={() => setIsDropdownHovered(true)} // Mouse aate hi dropdown true hoga
+              onMouseEnter={() => setIsDropdownHovered(true)}
               onMouseLeave={() => setIsDropdownHovered(false)}
             >
               <Nav.Link
@@ -109,7 +107,6 @@ function NavbarBox({ onToggleSidebar }) {
           </Nav>
         </Navbar.Collapse>
 
-        {/* Action Buttons & Mobile Hamburger Button (Right Side) */}
         <div className='d-flex align-items-center gap-3'>
           <Nav.Link href='#stores' className='d-none d-sm-block text-dark p-0'>
             <HiOutlineBuildingStorefront size={22} />
@@ -124,7 +121,6 @@ function NavbarBox({ onToggleSidebar }) {
             <FaUser size={22} />
           </Nav.Link>
 
-          {/* Menu Toggle Trigger Button */}
           <button
             className='d-lg-none border-0 bg-transparent p-0 ms-2'
             onClick={onToggleSidebar}

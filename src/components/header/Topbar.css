@@ -1,16 +1,14 @@
-/* Custom class for removing dirty standard webkit layout native tracking scroll-bars */
 .custom-topbar-scroll::-webkit-scrollbar {
-  display: none !important; /* Safari, Chrome, Opera layouts desktop engines support */
+  display: none !important;
 }
 
 .custom-topbar-scroll {
-  -ms-overflow-style: none !important; /* Internet Explorer / Edge systems browser engine */
-  scrollbar-width: none !important; /* Pure Firefox configurations layout render code */
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
-/* Micro tweaks small timestamp screen responsive handling layout tracks text values */
 @media (max-width: 768px) {
   .small-timestamp {
-    display: none !important; /* Mobile screens par timestamp hide hoga taaki compact gold rates clear dikhein */
+    display: none !important;
   }
 }

@@ -12,9 +12,7 @@ function DropdownBox() {
       }}
     >
       <div className='container-fluid px-3 px-md-5'>
-        {/* Main 5 Columns Layout (Exact Matching Image) */}
         <div className='row g-4 justify-content-between'>
-          {/* Column 1: Antique & Temple Collections */}
           <div className='col-lg-2'>
             <h6
               className='text-uppercase fw-bold mb-4'
@@ -38,9 +36,7 @@ function DropdownBox() {
                     height: '44px',
                     backgroundColor: '#000000',
                   }}
-                >
-                  {/* Aap yahan dynamic img tag ya icon laga sakte hain */}
-                </div>
+                ></div>
                 <span style={{ fontSize: '14px', fontWeight: '500' }}>
                   Kids
                 </span>
@@ -113,7 +109,6 @@ function DropdownBox() {
             </div>
           </div>
 
-          {/* Column 2: Bridal Collection */}
           <div className='col-lg-2'>
             <h6
               className='text-uppercase fw-bold mb-4'
@@ -145,7 +140,6 @@ function DropdownBox() {
             </div>
           </div>
 
-          {/* Column 3: Daily Wear Collection */}
           <div className='col-lg-2'>
             <h6
               className='text-uppercase fw-bold mb-4'
@@ -207,7 +201,6 @@ function DropdownBox() {
             </div>
           </div>
 
-          {/* Column 4: Diamond Collection */}
           <div className='col-lg-2'>
             <h6
               className='text-uppercase fw-bold mb-4'
@@ -269,7 +262,6 @@ function DropdownBox() {
             </div>
           </div>
 
-          {/* Column 5: Gold and Silver Coins */}
           <div className='col-lg-2'>
             <h6
               className='text-uppercase fw-bold mb-4'
@@ -318,7 +310,6 @@ function DropdownBox() {
           </div>
         </div>
 
-        {/* Bottom Right Side Anchor Links */}
         <div
           className='d-flex justify-content-end gap-4 mt-5 pt-3 border-top'
           style={{ fontSize: '13.5px' }}

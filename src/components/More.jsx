@@ -3,7 +3,6 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function More() {
-  // आपके कैटलॉग के अनुसार सभी कलेक्शन्स और उनकी कैटेगरीज का डेटा
   const collections = [
     {
       title: 'Antique Collections',
@@ -41,7 +40,6 @@ function More() {
 
   return (
     <Container className='my-5' style={{ fontFamily: 'sans-serif' }}>
-      {/* मुख्य कैटलॉग हेडर */}
       <div className='mb-4'>
         <span style={{ fontSize: '12px', color: '#888', letterSpacing: '1px' }}>
           CATALOGUE / ALL CATEGORIES
@@ -51,10 +49,8 @@ function More() {
         </p>
       </div>
 
-      {/* सभी कलेक्शन्स का लूप */}
       {collections.map((collection, index) => (
         <div key={index} className='mb-5'>
-          {/* कलेक्शन का टाइटल बार */}
           <div
             className='d-flex justify-content-between align-items-center mb-3 pb-2'
             style={{ borderBottom: '1px solid #f0ede9' }}
@@ -83,7 +79,6 @@ function More() {
             </Link>
           </div>
 
-          {/* कैटेगरीज ग्रिड (किड्स, मेन, वीमेन) */}
           <Row className='g-3'>
             {collection.categories.map((cat, catIdx) => (
               <Col
@@ -102,18 +97,15 @@ function More() {
                     className='border-0 bg-transparent text-center'
                     style={{ cursor: 'pointer' }}
                   >
-                    {/* 🚀 इमेज का बाहरी डिब्बा (स्क्वेयर ब्लैक बॉक्स) */}
                     <div
                       className='overflow-hidden mb-2 d-flex align-items-center justify-content-center'
                       style={{
                         backgroundColor: '#000000',
-                        aspectRatio: '1/1', // परफेक्ट स्क्वायर बनाने के लिए
-                        borderRadius: '12px', // इमेज के अनुसार कोनों को हल्का राउंड किया
+                        aspectRatio: '1/1',
+                        borderRadius: '12px',
                         padding: '12px',
                         transition: 'transform 0.3s ease',
                       }}
-                      // ❌ यहाँ से scale(1.4) वाला इफ़ेक्ट हटा दिया गया है
-                      // इसके बजाय माउस ले जाने पर पूरा बॉक्स हल्का सा ऊपर उठेगा जो प्रीमियम लुक देगा
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.transform = 'translateY(-4px)')
                       }
@@ -128,12 +120,10 @@ function More() {
                         style={{
                           maxHeight: '100%',
                           objectFit: 'contain',
-                          // यहाँ कोई scale एनीमेशन नहीं है, इसलिए इमेज बिल्कुल स्थिर और साफ़ रहेगी
                         }}
                       />
                     </div>
 
-                    {/* कैटेगरी का नाम (KIDS, MEN, WOMEN) */}
                     <span
                       style={{
                         fontSize: '10px',

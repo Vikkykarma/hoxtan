@@ -1,15 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './Sample.css'; // Import the CSS file for custom styles
+import './Sample.css';
 
 function Sample() {
   return (
     <Container className='py-5 bg-white hoxtan-collections-section'>
-      {/* ======================================================== */}
-      {/* TOP ROW: HEADER SECTION & BRIDAL LARGE BANNER            */}
-      {/* ======================================================== */}
       <Row className='g-4 mb-4'>
-        {/* Left Block: Heading Text Panel */}
         <Col
           xs={12}
           md={4}
@@ -24,7 +20,6 @@ function Sample() {
           </p>
         </Col>
 
-        {/* Right Block: Luxury Bridal Collections Large Banner Card */}
         <Col xs={12} md={8}>
           <div
             className='collection-card large-banner rounded-4 p-4 p-md-5 d-flex flex-column justify-content-end align-items-start'
@@ -40,11 +35,7 @@ function Sample() {
         </Col>
       </Row>
 
-      {/* ======================================================== */}
-      {/* BOTTOM ROW: THREE EQUAL SIZE FEATURE CARDS               */}
-      {/* ======================================================== */}
       <Row className='g-4'>
-        {/* Card 1: Statement Pieces */}
         <Col xs={12} sm={6} md={4}>
           <div
             className='collection-card square-card rounded-4 p-4 d-flex flex-column justify-content-end align-items-start'
@@ -59,7 +50,6 @@ function Sample() {
           </div>
         </Col>
 
-        {/* Card 2: Men's Essentials */}
         <Col xs={12} sm={6} md={4}>
           <div
             className='collection-card square-card rounded-4 p-4 d-flex flex-column justify-content-end align-items-start'
@@ -74,7 +64,6 @@ function Sample() {
           </div>
         </Col>
 
-        {/* Card 3: Everyday Gold */}
         <Col xs={12} sm={12} md={4}>
           <div
             className='collection-card square-card rounded-4 p-4 d-flex flex-column justify-content-end align-items-start'

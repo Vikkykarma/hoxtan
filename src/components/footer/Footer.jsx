@@ -4,7 +4,6 @@ import { FcGoogle } from 'react-icons/fc';
 import { BiLogoPlayStore } from 'react-icons/bi';
 
 function Footer() {
-  // हेडिंग्स के नीचे दिखने वाली गोल्डन लाइन का कॉमन स्टाइल
   const underlineStyle = {
     display: 'block',
     width: '25px',
@@ -14,7 +13,6 @@ function Footer() {
     marginBottom: '20px',
   };
 
-  // लिंक्स का कॉमन स्टाइल
   const linkStyle = {
     color: '#555555',
     textDecoration: 'none',
@@ -34,10 +32,8 @@ function Footer() {
     >
       <Container>
         <Row xs={2} md={3} lg={6} className='g-4'>
-          {/* 1. ब्रांड लोगो और एड्रेस सेक्शन */}
           <Col>
             <div className='mb-3'>
-              {/* लोगो टेक्सट / इमेज */}
               <h2
                 style={{
                   fontFamily: 'sans-serif',
@@ -75,7 +71,6 @@ function Footer() {
               Made to Shine for You
             </p>
 
-            {/* कांटेक्ट डिटेल्स */}
             <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.8' }}>
               <div className='d-flex align-items-start mb-2'>
                 <span className='me-2'>📍</span>
@@ -97,7 +92,6 @@ function Footer() {
             </div>
           </Col>
 
-          {/* 2. Collections लिंक्स */}
           <Col>
             <h5
               style={{
@@ -127,7 +121,6 @@ function Footer() {
             </a>
           </Col>
 
-          {/* 3. Customer Services लिंक्स */}
           <Col>
             <h5
               style={{
@@ -151,7 +144,6 @@ function Footer() {
             </a>
           </Col>
 
-          {/* 4. Information लिंक्स */}
           <Col>
             <h5
               style={{
@@ -181,7 +173,6 @@ function Footer() {
             </a>
           </Col>
 
-          {/* 5. My Account लिंक्स */}
           <Col xs={6} sm={6} md={4} lg={1.5}>
             <h5
               style={{
@@ -211,7 +202,6 @@ function Footer() {
             </a>
           </Col>
 
-          {/* 6. Download App और सोशल मीडिया */}
           <Col xs={12} sm={6} md={4} lg={1.5} className='ms-auto'>
             <h5
               style={{
@@ -230,7 +220,6 @@ function Footer() {
               Shop on the go with the Hoxtan App.
             </p>
 
-            {/* स्टोर बटन इमेजेस के लिए प्लेसहोल्डर */}
             <div
               className='d-flex flex-column gap-2 mb-4'
               style={{ maxWidth: '135px' }}
@@ -243,7 +232,6 @@ function Footer() {
               </a>
             </div>
 
-            {/* सोशल मीडिया सर्कुलर आइकॉन्स */}
             <div className='d-flex gap-2'>
               {['📸', '👤', '📺', '𝕏'].map((icon, idx) => (
                 <a

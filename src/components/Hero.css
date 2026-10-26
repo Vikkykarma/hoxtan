@@ -1,13 +1,11 @@
-/* --- Background Image Styling with Exact Height --- */
 .carousel-bg-image {
-  height: 372.5px; /* Aapki fixed height */
+  height: 372.5px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
 
-/* Image overlay overlay layer */
 .carousel-bg-image::before {
   content: '';
   position: absolute;
@@ -15,15 +13,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.25); /* Text readability ke liye overlay */
+  background: rgba(255, 255, 255, 0.25);
 }
 
-/* --- Caption Customization (Centered inside 372.5px) --- */
 .full-carousel-wrapper .custom-caption {
   position: absolute;
   left: 2% !important;
   right: auto !important;
-  top: 45%; /* Thoda upar taaki neeche controls ke liye space bache */
+  top: 45%;
   transform: translateY(-50%);
   text-align: left;
   max-width: 480px;
@@ -31,7 +28,6 @@
   padding: 0;
 }
 
-/* Typography Optimized for Shorter Height */
 .custom-caption .subtitle {
   font-size: 11px;
   color: #555;
@@ -43,7 +39,7 @@
 
 .custom-caption .main-title {
   font-family: Outfit;
-  font-size: 34px; /* Height ke hisab se font thoda chota kiya hai */
+  font-size: 34px;
   color: #1a2b49;
   font-weight: 600;
   line-height: 1.2;
@@ -68,10 +64,9 @@
   font-weight: 600;
 }
 
-/* --- Controls & Indicators Adjusted for 372.5px Height --- */
 .full-carousel-wrapper .carousel-indicators {
   justify-content: flex-start !important;
-  margin-left: 4% !important; /* Arrows ke just baad dots alignment */
+  margin-left: 4% !important;
   bottom: 20px !important;
   width: auto !important;
 }
@@ -91,19 +86,19 @@
 .full-carousel-wrapper .carousel-control-prev,
 .full-carousel-wrapper .carousel-control-next {
   top: auto !important;
-  bottom: 15px !important; /* Bottom se exact gap */
+  bottom: 15px !important;
   width: auto !important;
   height: auto !important;
   opacity: 1 !important;
 }
 
 .full-carousel-wrapper .carousel-control-prev {
-  left: 2% !important; /* Text line ke alignment me */
+  left: 2% !important;
   right: auto !important;
 }
 
 .full-carousel-wrapper .carousel-control-next {
-  left: 9% !important; /* Left arrow ke bilkul side me */
+  left: 9% !important;
   right: auto !important;
 }
 

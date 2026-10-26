@@ -4,20 +4,16 @@ import { Link, useParams } from 'react-router-dom';
 import { FiHeart } from 'react-icons/fi';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
-// अपनी मुख्य डेटा फ़ाइल से प्रोडक्ट्स को इम्पोर्ट किया
 import Products from '../Products.js';
 
 function ProductCarousel() {
-  // 1. यूआरएल (URL) से एक्टिव प्रोडक्ट की 'id' पकड़ी
   const { id } = useParams();
   const currentProductId = parseInt(id);
 
-  // 🚀 जादू यहाँ है: एक्टिव प्रोडक्ट को छोड़कर बाकी बचे प्रोडक्ट्स का फिल्टर
   const filteredProducts = Products.filter(
     (product) => product.id !== currentProductId
   );
 
-  // ऐरो बटन्स का स्टाइल
   const arrowBtnStyle = {
     position: 'absolute',
     top: '50%',
@@ -34,13 +30,11 @@ function ProductCarousel() {
     zIndex: 10,
     cursor: 'pointer',
     color: '#333',
-    // मोबाइल पर ऐरो छुपाने के लिए (क्योंकि मोबाइल पर उंगली से स्वाइप करना आसान होता है)
     '@media (maxWidth: 767px)': { display: 'none' },
   };
 
   return (
     <Container className='my-5 position-relative px-4'>
-      {/* हेडर सेक्शन: टाइटल और VIEW ALL */}
       <div className='d-flex justify-content-between align-items-center mb-4'>
         <h4
           style={{
@@ -69,7 +63,6 @@ function ProductCarousel() {
         </Link>
       </div>
 
-      {/* डेस्कटॉप के लिए नेविगेशन ऐरो (यदि कैरोसेल को मैन्युअल खिसकाना हो) */}
       <div
         style={{ ...arrowBtnStyle, left: '-5px' }}
         className='d-none d-md-flex'
@@ -83,22 +76,16 @@ function ProductCarousel() {
         <FaChevronRight size={12} />
       </div>
 
-      {/* 🚀 स्मूथ कैरोसेल स्क्रॉलिंग बॉक्स (बिना किसी बाहरी लाइब्रेरी के) */}
       <div
         className='d-flex gap-3 pb-3 custom-scrollbar'
         style={{
-          overflowX: 'auto', // हॉरिजॉन्टल स्क्रॉल चालू करने के लिए
-          scrollBehavior: 'smooth', // स्मूथ स्क्रॉलिंग के लिए
-          WebkitOverflowScrolling: 'touch', // आईफ़ोन/आईपैड पर स्मूथ स्वाइप के लिए
+          overflowX: 'auto',
+          scrollBehavior: 'smooth',
+          WebkitOverflowScrolling: 'touch',
         }}
       >
-        {/* लूप अब केवल फिल्टर किए गए प्रोडक्ट्स पर चलेगा */}
         {filteredProducts.map((product) => (
-          <div
-            key={product.id}
-            // डेस्कटॉप पर 5 कार्ड फिट होंगे और मोबाइल पर कार्ड्स को स्वाइप करने के लिए एक निश्चित चौड़ाई (width) दी गई है
-            style={{ minWidth: '220px', flex: '0 0 auto' }}
-          >
+          <div key={product.id} style={{ minWidth: '220px', flex: '0 0 auto' }}>
             <Link
               to={`/product/${product.id}`}
               className='text-decoration-none'
@@ -123,7 +110,6 @@ function ProductCarousel() {
                     '0 2px 6px rgba(0,0,0,0.04)';
                 }}
               >
-                {/* ऊपरी ब्लैक सेक्शन जहाँ इमेज है */}
                 <div
                   style={{
                     backgroundColor: '#000000',
@@ -146,7 +132,6 @@ function ProductCarousel() {
                     }}
                   />
 
-                  {/* विशलिस्ट/हार्ट बटन */}
                   <button
                     onClick={(e) => {
                       e.preventDefault();
@@ -169,7 +154,6 @@ function ProductCarousel() {
                   </button>
                 </div>
 
-                {/* नीचे का सफ़ेद सेक्शन जहाँ टेक्स्ट डिटेल्स हैं */}
                 <Card.Body
                   className='p-3 text-start bg-white d-flex flex-column justify-content-between'
                   style={{ minHeight: '105px' }}
